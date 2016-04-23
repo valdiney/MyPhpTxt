@@ -12,10 +12,22 @@ class MyPhpTxt
 
 	private $fileResource;
 
-	public function __construct($path = false)
+	/**
+	 * You can optionally set the path to instantiate the class.
+	 * @param String $path Path to file folder
+	 */
+	public function __construct($path = null)
 	{
 		if($path)
 			$this->setPath($path);
+	}
+
+	/**
+	 * At the end of the implementation of the class, closes the file if it has not yet been closed.
+	 */
+	public function __destruct()
+	{
+		$this->closeFile();
 	}
 
 	/**
@@ -38,7 +50,6 @@ class MyPhpTxt
 
 	/**
      * Sets the file in the protected attribute "file"
-     * @param String $file Name without file extension
      * @param String $mode Access type. Accepted values: 'r', 'r+', 'w', 'w+', 'a', 'a+', 'x', 'x+'
      * More information in http://php.net/manual/pt_BR/function.fopen.php
      */
@@ -63,7 +74,6 @@ class MyPhpTxt
 
 	/**
 	 * Create a new file
-	 * @param  String $fileName File name
 	 */
 	public function createFile()
 	{
@@ -107,7 +117,7 @@ class MyPhpTxt
 	}
 
 	/**
-     * Write the data in the txt file
+     * Append content to the existing content in a file
      * @param  String $content Text to be written to the file
      */
 	public function appendCotent($content)

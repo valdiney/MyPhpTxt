@@ -24,8 +24,6 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
 		}
 
 		$fileContent = $txt->getContent();
-
-		$txt->closeFile();
 	} catch(Exception $e) {
 		$error = $e->getMessage();
 	}
