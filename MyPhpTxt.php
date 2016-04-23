@@ -123,18 +123,3 @@ class MyPhpTxt
 			fclose($this->fileResource);
 	}
 }
-
-/**
- * Observações
- * 
- * O nome da classe foi atualizado apenas como sugestão. Não acho bacana o nome de uma classe ser um verbo, acho melhor 
- * usar um substantivo já que verbos são mais utilizados para nomes de métodos, além disse "Export" limita a classe a só exportar,
- * mas nós podemos deixar ela mais interessante...
- * Ex.: Classe "Cachorro", Método "Latir"
- *
- * Não estamos usando Python, não use snake_case, use camelCase ;)
- *
- * A variável help foi removida porque não há necessidade para a sua exitência, fora que o nome não faz sentido.
- *
- * 
- */
