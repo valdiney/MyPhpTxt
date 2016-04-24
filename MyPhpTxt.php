@@ -120,7 +120,7 @@ class MyPhpTxt
      * Append content to the existing content in a file
      * @param  String $content Text to be written to the file
      */
-	public function appendCotent($content)
+	public function appendContent($content)
 	{
 		$this->openFile("a");
 		fwrite($this->fileResource, $content);

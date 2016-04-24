@@ -17,7 +17,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
 			$txt->setContent($userContent);
 		} else {
 			if($_POST['append'] == 'y') {
-				$txt->appendCotent($userContent);
+				$txt->appendContent($userContent);
 			} else {
 				$txt->setContent($userContent);
 			}
